@@ -3,110 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposal Project 3</title>
+    <title>Buku</title>
     <!--
         For more customization options, we would advise
         you to build your TailwindCSS from the source.
         https://tailwindcss.com/docs/installation
     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.2/tailwind.min.css">
-    
+    <style>
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+    </style>
 </head>
 <body class="overflow-x-hidden antialiased">
     <!-- Header Section -->
-    <header class="relative z-50 w-full h-24">
-        <div
-            class="container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-between xl:px-0">
-
-            <a href="/" class="relative flex items-center inline-block h-5 h-full font-black leading-none">
-                <svg class="w-auto h-6 text-indigo-600 fill-current" viewBox="0 0 194 116"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g fill-rule="evenodd">
-                        <path
-                            d="M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z" />
-                        <path d="M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z" />
-                    </g>
-                </svg>
-                <span class="ml-3 text-xl text-gray-800">UniStore<span class="text-pink-500">.</span></span>
-            </a>
-            <div
-                class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
-                <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
-                    viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs>
-                        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="c">
-                            <stop stop-color="#E614F2" offset="0%" />
-                            <stop stop-color="#FC3832" offset="100%" />
-                        </linearGradient>
-                        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="f">
-                            <stop stop-color="#657DE9" offset="0%" />
-                            <stop stop-color="#1C0FD7" offset="100%" />
-                        </linearGradient>
-                        <filter x="-4.7%" y="-3.3%" width="109.3%" height="109.3%" filterUnits="objectBoundingBox"
-                            id="a">
-                            <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1" />
-                            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
-                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" in="shadowBlurOuter1" />
-                        </filter>
-                        <filter x="-4.7%" y="-3.3%" width="109.3%" height="109.3%" filterUnits="objectBoundingBox"
-                            id="d">
-                            <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1" />
-                            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
-                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="shadowBlurOuter1" />
-                        </filter>
-                        <path
-                            d="M160.52 108.243h497.445c17.83 0 24.296 1.856 30.814 5.342 6.519 3.486 11.635 8.602 15.12 15.12 3.487 6.52 5.344 12.985 5.344 30.815v497.445c0 17.83-1.857 24.296-5.343 30.814-3.486 6.519-8.602 11.635-15.12 15.12-6.52 3.487-12.985 5.344-30.815 5.344H160.52c-17.83 0-24.296-1.857-30.814-5.343-6.519-3.486-11.635-8.602-15.12-15.12-3.487-6.52-5.343-12.985-5.343-30.815V159.52c0-17.83 1.856-24.296 5.342-30.814 3.486-6.519 8.602-11.635 15.12-15.12 6.52-3.487 12.985-5.343 30.815-5.343z"
-                            id="b" />
-                        <path
-                            d="M159.107 107.829H656.55c17.83 0 24.296 1.856 30.815 5.342 6.518 3.487 11.634 8.602 15.12 15.12 3.486 6.52 5.343 12.985 5.343 30.816V656.55c0 17.83-1.857 24.296-5.343 30.815-3.486 6.518-8.602 11.634-15.12 15.12-6.519 3.486-12.985 5.343-30.815 5.343H159.107c-17.83 0-24.297-1.857-30.815-5.343-6.519-3.486-11.634-8.602-15.12-15.12-3.487-6.519-5.343-12.985-5.343-30.815V159.107c0-17.83 1.856-24.297 5.342-30.815 3.487-6.519 8.602-11.634 15.12-15.12 6.52-3.487 12.985-5.343 30.816-5.343z"
-                            id="e" />
-                    </defs>
-                    <g fill="none" fill-rule="evenodd" opacity=".9">
-                        <g transform="rotate(65 416.452 409.167)">
-                            <use fill="#000" filter="url(#a)" xlink:href="#b" />
-                            <use fill="url(#c)" xlink:href="#b" />
-                        </g>
-                        <g transform="rotate(29 421.929 414.496)">
-                            <use fill="#000" filter="url(#d)" xlink:href="#e" />
-                            <use fill="url(#f)" xlink:href="#e" />
-                        </g>
-                    </g>
-                </svg>
-            </div>
-
-        </div>
-    </header>
+    <div id="mySidenav" class="sidenav">
+        <a style="padding: 6px 6px 6px 20px; font-size: 25px;" href="#">BAB I</a>
+        <a href="#latar-belakang">Pendahuluan</a>
+        <a href="#instalasi">Instalasi</a>
+        <a style="padding: 6px 6px 6px 20px; font-size: 25px;" href="#judulbab2">BAB II</a>
+        <a href="#tujuan-intruksional">Tujuan Instruksional</a>
+        <a href="#capaian-pembelajaran">Capaian Pembelajaran</a>
+        <a href="#judulbab4">Uraian Materi</a>
+        <a href="#judulbab5">Latihan</a>
+        <a href="#judulbab6">Rangkuman Materi</a>
+        <a href="#judulbab7">Pustaka</a>
+        <a style="padding: 6px 6px 6px 20px; font-size: 25px;" href="#pdf">PDF</a>
+      </div>
+      
     <!-- End Header Section-->
 
     <!-- ISI PROPOSAL -->
-    <div class="items-center text-center w-full overflow-x-hidden lg:pt-40 lg:pb-40 xl:pt-40 xl:pb-64">
-        <div id="judul">
-            
-        </div>
+    <div class="items-center text-center w-full overflow-x-hidden lg:pt-40 lg:pb-40 xl:pt-0 xl:pb-64">
+        <div id="judul"></div>
+        <br><br><br>
+
+        <div id="judulbab1"></div>
+
         <div class="flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full">
             <div class="w-full xl:w-1/2 xl:pr-8">
                 <blockquote
                     class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
                     <div class="flex flex-col pr-8">
-                        <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Latar Belakang Masalah</h3>
                         <div id="latar-belakang" class="relative pl-12">
-                            
-                        </div>
-
-                        <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
-                    </div>
-                </blockquote>
-            </div>
-        </div>
-
-
-        <div class="flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full">
-            <div class="w-full xl:w-1/2 xl:pr-8">
-                <blockquote
-                    class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
-                    <div class="flex flex-col pr-8">
-                        <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Identifikasi Masalah</h3>
-                        <div id="identifikasi-masalah" class="relative pl-12">
+                            <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Pendahuluan</h3>
                         </div>
 
                         <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
@@ -120,8 +85,8 @@
                 <blockquote
                     class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
                     <div class="flex flex-col pr-8">
-                        <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Tujuan</h3>
-                        <div id="tujuan" class="relative pl-12">
+                        <div id="instalasi" class="relative pl-12">
+                            <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Instalasi</h3>
                         </div>
 
                         <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
@@ -129,23 +94,39 @@
                 </blockquote>
             </div>
         </div>
+
+        <div id="judulbab2"></div>
 
         <div class="flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full">
             <div class="w-full xl:w-1/2 xl:pr-8">
                 <blockquote
                     class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
                     <div class="flex flex-col pr-8">
-                        <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Lingkup Dokumentasi</h3>
-                        <div id="lingkup-dokumentasi" class="relative pl-12">
-                            
+                        <div id="tujuan-intruksional" class="relative pl-12">
+                            <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Tujuan Intruksional</h3>
                         </div>
-
                         <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                     </div>
                 </blockquote>
             </div>
         </div>
-        <p style="font-size: 50px;">file pdf bisa di download <a style="color: blue;" href="https://drive.google.com/file/d/1bnPyaN1pt5eTUmoGcF3VJYpHc27B6aYy/view?usp=share_link">di sini</a></p>
+
+
+        <div class="flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full">
+            <div class="w-full xl:w-1/2 xl:pr-8">
+                <blockquote
+                    class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
+                    <div class="flex flex-col pr-8">
+                        <div id="capaian-pembelajaran" class="relative pl-12">
+                            <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Capaian Pembelajaran</h3>
+                        </div>
+                        <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+
+        <p id="pdf" style="font-size: 25px;">file pdf bisa di download <a style="color: blue;" href="https://drive.google.com/file/d/1OBnOcqgBagxrL6Q3hau5Xga5IB7Po5Ry/view?usp=sharing">di sini</a></p>
     <!-- AKHIR ISI PROPOSAL -->
 
     <footer class="px-4 pt-12 pb-8 text-white bg-white border-t border-gray-200">
